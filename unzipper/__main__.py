@@ -9,6 +9,12 @@ from .helpers_nexa.unzip_help import check_logs
 from config import Config
 
 if __name__ == "__main__" :
+    print("""
+||| Unzipper Bot |||
+Copyright (c) 2021 Itz-fork
+--> Join @NexaBotsUpdates
+--> Follow Itz-fork on Github
+""")
     if not os.path.isdir(Config.DOWNLOAD_LOCATION):
         os.makedirs(Config.DOWNLOAD_LOCATION)
     unzipperbot.start()

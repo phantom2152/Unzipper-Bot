@@ -1,1 +1,1 @@
-bash start.sh
+python3 -m unzipper
