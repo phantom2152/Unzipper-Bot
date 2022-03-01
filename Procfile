@@ -1,1 +1,1 @@
-python3 -m unzipper
+worker:python3 -m unzipper
