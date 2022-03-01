@@ -79,6 +79,7 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
                         archive = f"{download_path}/archive_from_{user_id}{os.path.splitext(url)[1]}"
                         await answer_query(query, f"**Trying to download!** \n\n**Url:** `{url}` \n\n`This may take a while, Go and grab a coffee ☕️!`", unzip_client=unzip_bot)
                         await download(url, archive)
+                        await unzip_bot.send_message(f"Path {archive}")
                         e_time = time()
                     else:
                         return await query.message.edit("**Sorry I can't download that URL 🥺!**")
@@ -145,6 +146,7 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
         spl_data = query.data.split("|")
         file_path = f"{Config.DOWNLOAD_LOCATION}/{spl_data[1]}/extracted"
         paths = await get_files(path=file_path)
+        await unzip_bot.send_message(f"Path after select: {paths}")
         # Next level logic lmao
         if not paths:
             if os.path.isdir(f"{Config.DOWNLOAD_LOCATION}/{spl_data[1]}"):
