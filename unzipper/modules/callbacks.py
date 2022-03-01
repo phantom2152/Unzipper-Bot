@@ -111,6 +111,7 @@ async def unzipper_cb(unzip_bot: Client, query: CallbackQuery):
                 ext_e_time = time()
             else:
                 ext_s_time = time()
+                print(f"Before extraction path {ext_files_dir},archive_path {archive}")
                 extractor = await extr_files(path=ext_files_dir, archive_path=archive)
                 ext_e_time = time()
             # Checks if there is an error happend while extracting the archive
