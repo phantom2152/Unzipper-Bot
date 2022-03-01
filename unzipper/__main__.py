@@ -1,5 +1,3 @@
-# Copyright (c) 2021 Itz-fork
-# Don't kang this else your dad is gae
 
 import os
 
@@ -12,8 +10,6 @@ if __name__ == "__main__" :
     print("""
 ||| Unzipper Bot |||
 Copyright (c) 2021 Itz-fork
---> Join @NexaBotsUpdates
---> Follow Itz-fork on Github
 """)
     if not os.path.isdir(Config.DOWNLOAD_LOCATION):
         os.makedirs(Config.DOWNLOAD_LOCATION)
