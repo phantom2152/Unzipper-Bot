@@ -1,1 +1,1 @@
-unzipper: bash start.sh
+bash start.sh
